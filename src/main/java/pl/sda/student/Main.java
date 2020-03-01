@@ -36,6 +36,13 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            Book[] books = objectMapper.readValue(new File("listaksiazek.json"), Book[].class);
+            for (Book booking : books)
+                System.out.println(booking.getAutor().getName() + " " + booking.getAutor().getLastname() + " " + booking.getCategory().getName () + " " + booking.getName ());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
