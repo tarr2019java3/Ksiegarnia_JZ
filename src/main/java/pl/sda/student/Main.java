@@ -39,7 +39,7 @@ public class Main {
         try {
             Book[] books = objectMapper.readValue(new File("listaksiazek.json"), Book[].class);
             for (Book booking : books)
-                System.out.println(booking.getAutor().getName() + " " + booking.getAutor().getLastname() + " " + booking.getCategory().getName () + " " + booking.getName ());
+                System.out.println(booking.getName () + " " +booking.getAutor().getName() + " " + booking.getAutor().getLastname() + " " + booking.getCategory().getName ());
         } catch (IOException e) {
             e.printStackTrace();
         }
